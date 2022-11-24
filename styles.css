@@ -108,7 +108,7 @@
         position: relative;
         top: -5vh;
         animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        text-shadow: 0px 0px 10px black;
+        text-shadow: 0px 0px 5px black;
         
     }
     .links{
