@@ -1,0 +1,140 @@
+@media screen and (max-width: 450px){
+    *{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    @font-face {
+      font-family: 'xirodregular';
+      src: url('xirod/xirod.woff2') format('woff2'),
+           url('xirod/xirod.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body{
+      margin-top: 100px;
+      height: 100vh;
+    }
+    header{
+      justify-content: space-between;
+      position: fixed;
+      display: flex;
+      background-color: black;
+      top: 0;
+      z-index: 3;
+      padding: 5px;
+    }
+    header a{
+      text-decoration: none;
+    }
+    div{
+      width: 100%;
+
+    }
+    div img{
+      width: 35%;
+      height: auto;
+      position: relative;
+      top: 0;
+      left: -1%;
+      filter: invert(1);
+    }
+    div h1{
+      font-size: 18px;
+      width: 100%;
+      text-align: right;
+      padding: 12px;
+      font-family: 'xirodregular';
+      color: white;
+    }
+
+    .main-text{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 100%;
+      background-color: white;
+      position: fixed;
+      top: 8vh;
+      z-index: 2;
+      padding: 20px;
+    }
+    .main-text h3{
+      margin-top: 20px;
+      text-align: center;
+      animation: bounce-top 0.9s both;
+    }
+    main{
+      perspective: 10000px;
+      height: 100%;
+    }
+    main div{
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      animation: turn 5s infinite;
+    }
+      
+    main div img{
+      width: 100%;
+      height: auto;
+      filter: invert(0);
+    }
+    .front, .back{
+      position: absolute;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    .back{
+      transform: rotateY(180deg);
+    }
+}
+
+@keyframes bounce-top {
+    0% {
+      transform: translateY(-45px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(-24px);
+      animation-timing-function: ease-in;
+    }
+    65% {
+      transform: translateY(-12px);
+      animation-timing-function: ease-in;
+    }
+    82% {
+      transform: translateY(-6px);
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateY(-4px);
+      animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+   
+}
+@keyframes turn{
+  0%{
+    transform: rotateY(0deg);
+  }
+  50%{
+    transform: rotateY(180deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+  
